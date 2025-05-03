@@ -1,0 +1,90 @@
+String Username, Password, query, Email = null, password = null;
+        String SUrl, SUser, SPass;
+        SUrl = "jdbc:MySQL://localhost:3306/aplikasi_database";
+        SUser = "root";
+        SPass = "";
+        int notFound = 0;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
+            Statement st = con.createStatement();
+            if("".equals(email.getText())){
+                JOptionPane.showMessageDialog(new JFrame(), "Email diperlukan", "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }else if("".equals(pass.getText())){
+                JOptionPane.showMessageDialog(new JFrame(), "Password diperlukan", "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }else {
+            Email = email.getText();
+            Password = pass.getText();
+            
+            query = "SELECT * FROM user WHERE email= '"+Email+"'";
+       
+            ResultSet rs = st.executeQuery(query);
+            while(rs.next()){
+                password = rs.getString("password");
+                Email = rs.getString("email");
+                notFound = 1;
+            }
+            if(notFound == 1 && Password.equals(password)){
+                home HomeFrame = new home();
+                HomeFrame.setVisible(true);
+                HomeFrame.pack();
+                HomeFrame.setLocationRelativeTo(null); 
+                this.dispose();
+            }else{
+               JOptionPane.showMessageDialog(new JFrame(), "Username atau passoword salah", "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+            }
+        }catch(Exception e){
+           System.out.println("Error!" + e.getMessage()); 
+    }                           
+
+
+String name = nameField.getText();
+        String email = emailField.getText();
+        String telp = telpField.getText();
+        String pass = new String(passField.getPassword());
+
+        String SUrl, SUser, SPass;
+        SUrl = "jdbc:MySQL://localhost:3306/aplikasi_database";
+        SUser = "root";
+        SPass = "";
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
+            String query = "UPDATE user SET Nama=?, email=?, telp=?, password=? WHERE email=?";
+            PreparedStatement pst = con.prepareStatement(query);
+            pst.setString(1, name);
+            pst.setString(2, email);
+            pst.setString(3, telp);
+            pst.setString(4, pass);
+            pst.setString(5, this.email);  // Use the old email as a reference to update the record
+            pst.executeUpdate();
+
+            profil ProfilFrame = new profil();
+            ProfilFrame.setUserDetails(name, email, telp);
+            ProfilFrame.setVisible(true);
+            ProfilFrame.pack();
+            ProfilFrame.setLocationRelativeTo(null);
+            this.dispose();
+
+        } catch (Exception e) {
+            System.out.println("Error!" + e.getMessage());
+        }
+    }
+
+
+
+
+
+
+
+profil ProfilFrame = new profil();
+        ProfilFrame.setUserDetails(nama, Email, telp, password);
+        ProfilFrame.setVisible(true);
+        ProfilFrame.pack();
+        ProfilFrame.setLocationRelativeTo(null);
+        dispose();
