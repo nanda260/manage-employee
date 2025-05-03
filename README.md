@@ -2,13 +2,21 @@
 Untuk instal aplikasi “Pengelolaan Pegawai” bisa dilakukan dengan dua cara yaitu impor file program ke netbeans atau instal file program berformat exe.
 Yang Perlu Disiapkan:
 •	Laptop/PC
+
 •	Xampp Control Panel
+
 •	Netbeans
+
 •	File Program aplikasi “pengelolaan pegawai” bisa di akses melalui link berikut:
+
 Aplikasi berformat zip
+
 https://drive.google.com/drive/folders/191zoTRwG7skH2CNQ3HEQLc3EDblSW2Jo
+
 Aplikasi berformat exe
+
 https://drive.google.com/file/d/1yj2JQi8OKIagBEQN__FsZfzJSK31cAzg/view?usp=drivesdk
+
 •	mysql-connector-j-8.3.0
 
 A.	Cara Instalasi pada Aplikasi Netbeans:
@@ -30,6 +38,7 @@ https://drive.google.com/file/d/1yj2JQi8OKIagBEQN__FsZfzJSK31cAzg/view?usp=drive
     https://youtu.be/ZFsYeeQz5PA?si=Vj87cBswXf99Ndfs
     https://youtu.be/Jt0324yHx20?si=4994bCu4s2KL6gbg
 3. Selanjutnya jika file sudah tidak lagi terdeteksi virus, maka aplikasi siap untuk di instal dan jangan lupa untuk menghidupkan apache dan mysql pada xampp control panel agar aplikasi bisa dijalankan.
+
 
 
 Team Project:
