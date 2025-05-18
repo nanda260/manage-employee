@@ -40,6 +40,9 @@ https://drive.google.com/file/d/1yj2JQi8OKIagBEQN__FsZfzJSK31cAzg/view?usp=drive
 3. Selanjutnya jika file sudah tidak lagi terdeteksi virus, maka aplikasi siap untuk di instal dan jangan lupa untuk menghidupkan apache dan mysql pada xampp control panel agar aplikasi bisa dijalankan.
 
 
+![image](https://github.com/user-attachments/assets/e56557f5-2eb5-47c2-912f-0a5ffc20a6bc)
+
+
 
 Team Project:
 1.	Miftakhul Maulida
